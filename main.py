@@ -15,14 +15,13 @@ def get_user_choice():
     """Displays a menu for the user to choose the screen mode."""
     print("\nSELECT SCRCPY DISPLAY MODE:")
     print("1. Standard Mirroring (Clones your phone screen)")
-    print("2. Samsung DeX (Launches DeX desktop mode interface)")
-    print("3. Virtual Display (Creates a separate 1920x1080 canvas)")
+    print("2. Virtual Display (Creates a separate 1920x1080 canvas)")
     
     while True:
-        choice = input("\nEnter your choice (1, 2, or 3): ").strip()
-        if choice in ['1', '2', '3']:
+        choice = input("\nEnter your choice (1 Or 2: ").strip()
+        if choice in ['1', '2']:
             return choice
-        print("❌ Invalid input. Please enter 1, 2, or 3.")
+        print("❌ Invalid input. Please enter 1 or 2.")
 
 def find_and_run():
     # Ask the user for their preferred display mode first
@@ -51,12 +50,8 @@ def find_and_run():
         if mode_choice == '1':
             print("Launching Standard Mirroring...")
             scrcpy_command = base_cmd
+        
         elif mode_choice == '2':
-            print("Launching Samsung DeX Mode...")
-            print("Note: DeX mode requires a compatible Samsung device with DeX support.and if not then enter 3 not 2")
-            # Flag to target the secondary display interface used by DeX
-            scrcpy_command = f"{base_cmd} --display-id=2" 
-        elif mode_choice == '3':
             print("Launching 1920x1080 Virtual Display...")
             scrcpy_command = f"{base_cmd} --new-display=1920x1080"
             
