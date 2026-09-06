@@ -63,4 +63,13 @@ python main.py
 
 ```
 
+## Notes
+
+ This works when you install the 'scrcpy' check if there is 'scrcpy' in your Device
+
+ Turn on the Wireless debugging in your Phone
+
+ <img width="325" height="726" alt="Screenshot 2026-09-06 at 7 44 59 PM" src="https://github.com/user-attachments/assets/14eb10d6-e1a8-44d6-9562-492e038f270d" />
+
+
 
