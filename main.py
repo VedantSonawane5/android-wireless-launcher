@@ -18,7 +18,7 @@ def get_user_choice():
     print("2. Virtual Display (Creates a separate 1920x1080 canvas)")
     
     while True:
-        choice = input("\nEnter your choice (1 Or 2: ").strip()
+        choice = input("\nEnter your choice (1 or 2): ").strip()
         if choice in ['1', '2']:
             return choice
         print("❌ Invalid input. Please enter 1 or 2.")
